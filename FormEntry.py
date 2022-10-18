@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter.ttk import Combobox, Treeview
 import csv
@@ -9,7 +8,7 @@ import os
 win = tk.Tk()
 win.title("STUDENT MANAGEMENT PROJECT")
 x = win.winfo_screenwidth()
-y = win.winfo_screenheight()
+y = win.winfo_screenheight() - 150
 win.geometry("{}x{}+{}+{}".format(x,y,0,0))
 win.config(bg='teal')
 
@@ -19,7 +18,7 @@ lbl_frame = tk.Label(win, text="STUDENT MANAGEMENT PROJECT", bd=4,
 lbl_frame.pack(fill=tk.X)
 ###############  FRAME ENTRY   ############
 ent_frame = tk.Frame(win, bg='white')
-ent_frame.place(x=5, y=50, width=400, height=740)
+ent_frame.place(x=5, y=50, width=400, height=650)
 lbl_menu = tk.Label(ent_frame, text='ENTRY THIS',bd=4, 
     bg='teal', font=('ROBOTO', 20, 'bold'), 
     fg='black', relief=tk.GROOVE) 
@@ -48,7 +47,7 @@ lbl_ADDRESS = tk.Label(ent_frame, text="ADDRESS", font=('times new roman', 20, '
 lbl_ADDRESS.place(x=10, y=470)
 
 lbl_MARK = tk.Label(ent_frame, text="TOTAL MARK", font=('times new roman', 20, 'bold'), bg='white')
-lbl_MARK.place(x=10, y=610)
+lbl_MARK.place(x=10, y=550)
 
 
 # ENTRY
@@ -71,10 +70,10 @@ ent_EMAIL = tk.Entry(ent_frame, font=('times new roman', 15), bd=2)
 ent_EMAIL.place(x=10, y=430, width=350)
 
 ent_ADDRESS = tk.Text(ent_frame, font=('times new roman', 15), bd=2)
-ent_ADDRESS.place(x=10, y=510, width=350, height=100)
+ent_ADDRESS.place(x=10, y=510, width=350, height=30)
 
 ent_MARK = tk.Entry(ent_frame, font=('times new roman', 15), bd=2)
-ent_MARK.place(x=10, y=650, width=350)
+ent_MARK.place(x=10, y=590, width=350)
 
 ###############   DATABASE   #############
 def open_database():
@@ -111,7 +110,7 @@ database = open_database()
 
 ########  FRAME TREE VIEW  ########
 tv_frame = tk.Frame(win, bg='white')
-tv_frame.place(x=450, y=50, width=1040, height=600)
+tv_frame.place(x=450, y=50, width=1040, height=400)
 
 lbl_TV = tk.Label(tv_frame, text='TREE VIEW',bd=3, 
     bg='teal', font=('ROBOTO', 20, 'bold'), 
@@ -241,7 +240,7 @@ def select_record():
 
 ########  FRAME BUTTONS  ########
 btn_frame = tk.Frame(win, bg='teal')
-btn_frame.place(x=470, y=660, width=1000, height=120)
+btn_frame.place(x=470, y=480, width=1000, height=120)
 # Buttons
 btn_Add = tk.Button(btn_frame, text="ADD", bd=2, 
     background='teal', relief=tk.GROOVE,
@@ -265,4 +264,3 @@ btn_Select.grid(row=0, column=3, padx=10)
 
 
 win.mainloop()
-
