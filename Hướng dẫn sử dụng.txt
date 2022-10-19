@@ -1,0 +1,29 @@
+Các chức năng:
+- Đăng nhập: nhập đúng thông tin
+ + Username: nhatanh
+ + Password: 123456
+
+- Thêm thông tin mới vào database:
+ + Điền các thông tin vào form entry
+ + Nhấn vào nút "ADD"
+
+- Xóa thông tin:
+ + Chọn vào thông tin cần xóa trong Treeview
+ + Nhấn chọn nút "REMOVE"
+
+- Cập nhật thông tin
+ + Chọn vào thông tin cần cập nhật trong Treeview
+ + Nhấn chọn nút "SELECT" để hiện thông tin trên form Entry
+ + Sửa thông tin cần thiết
+ + Nhấn chọn nút "UPDATE"
+
+- Xem thông tin bình thường:
+ + Nhấn nút "RESET"
+
+- Tìm thông tin bằng ID:
+ + Nếu có thông tin thì nhấn chọn "RESET" để các ô không còn thông tin
+ + Điền ID cần tìm
+ + Nhấn chọn nút "SEARCH BY ID" để xem thông tin
+
+- Sắp xếp các thông tin theo Tên hoặc Điểm:
+ + Chọn nút "SORT BY NAME" hoặc "SORT BY MARK"
